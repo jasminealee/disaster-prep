@@ -9,6 +9,10 @@ const appRoutes: Routes = [
     {
       path: '',
       component: SplashPageComponent
+    },
+    {
+        path: 'emergencyPrompt',
+        component: EmergencyPromptComponent
     }
   ];
   

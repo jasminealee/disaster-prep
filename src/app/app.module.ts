@@ -18,7 +18,8 @@ import { EmergencyPromptComponent } from './emergency-prompt/emergency-prompt.co
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
