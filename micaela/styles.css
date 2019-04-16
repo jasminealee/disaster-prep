@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+}
+
+button {
+  padding: 50px;
+}
+
+.Sandrift {
+  background-color: #AB947E;
+}
+
+.Kangaroo {
+  background-color: #C9CEBD;
+}
+
+.FuscousGray {
+  background-color: #59544B;
+}
+
+.Stiletto {
+  background-color: #992C2C;
+}
+
+.CuttySark {
+  background-color: #4F6367;
+}
+
+.Logo {
+  padding-top: 100px;
+}
+
+img {
+  height: 200px;
+}
+i {
+  font-size: 3em;
+}
+.grid-container {
+  margin-top: 100px;
+  margin-left: 10%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 5px;
+}
