@@ -17,8 +17,11 @@ export class EmergencyPromptComponent implements OnInit {
     this.router.navigate(['emergencyInfo']);
   }
 
+  goToMainMenu() {
+    this.router.navigate(['mainMenu']);
+  }
+
   goToScenarioPrompt() {
     this.router.navigate(['scenarios']);
   }
-
 }

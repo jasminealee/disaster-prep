@@ -15,6 +15,11 @@ import { ScenariosComponent } from './scenarios/scenarios.component';
 import { AdminComponent } from './admin/admin.component';
 import { EmergencyInfoComponent } from './emergency-info/emergency-info.component';
 import { ScenarioItemsComponent } from './scenario-items/scenario-items.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
+import { SurvivalComponent } from './survival/survival.component';
+import { PrepComponent } from './prep/prep.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { AddScenarioComponent } from './add-scenario/add-scenario.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,6 +37,11 @@ export const firebaseConfig = {
     AdminComponent,
     EmergencyInfoComponent,
     ScenarioItemsComponent,
+    MainMenuComponent,
+    SurvivalComponent,
+    PrepComponent,
+    AddItemComponent,
+    AddScenarioComponent,
   ],
   imports: [
     BrowserModule,

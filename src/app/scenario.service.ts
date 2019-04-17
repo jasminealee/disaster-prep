@@ -24,7 +24,7 @@ export class ScenarioService {
     return this.database.object('scenarios/' + scenarioId); //scenarios in json with scenarioId, requesting a single object
   }
 
-  goToScenarioLibararu() {
+  goToScenarioLibarary() {
     return this.router.navigate(['/scenarios']);
   }
 }

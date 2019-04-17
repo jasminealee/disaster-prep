@@ -1,3 +1,12 @@
-<p>
-  scenario-items works!
-</p>
+<div *ngFor="let item of items | async">
+  <div>{{item.title}}</div>
+  <img src="{{item.source}}">
+  <p (click)="addItemToBag(item)">add item to bag</p>
+</div>
+
+<!-- <div>Bag: 
+  <div *ngFor="item of bag | async">
+    <div>{{item.title}}</div>
+    <p (click)="addAllToPrepList(bag)">Add to prep list</p>
+  </div>
+</div> -->

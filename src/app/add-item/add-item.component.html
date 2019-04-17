@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="nested">
+      <h3>Add an item to {{selectedScenario.title}}</h3>
+      <div>
+        <div>
+          <label>Title:</label>
+          <br>
+          <input #newTitle>
+        </div>
+      </div>
+      <br><button (click)="submitForm(newTitle.value); goBackToScenarioItems();  newTitle.value='';">Submit</button>
+    </div>
+    <p (click)="goBackToScenarioItems()">go back(-)</p>
+  </div>
+  
