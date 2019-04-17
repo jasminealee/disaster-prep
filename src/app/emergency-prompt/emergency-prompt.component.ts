@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-emergency-prompt',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmergencyPromptComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToEmergencyInfo() {
+    this.router.navigate(['emergencyInfo']);
+  }
+
+  goToScenarioPrompt() {
+    this.router.navigate(['scenarios']);
   }
 
 }
