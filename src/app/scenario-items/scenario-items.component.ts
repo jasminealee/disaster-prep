@@ -36,6 +36,8 @@ export class ScenarioItemsComponent implements OnInit {
         equalTo: this.scenarioId,
       }
     });
+    console.log(this.items);
+
     // this.scenarioService.getScenarioById(this.scenarioId).subscribe(dataLastEmittedFromObserver => {
     //   this.selectedScenario = new Scenario(dataLastEmittedFromObserver.title,
     //                                         dataLastEmittedFromObserver.source)

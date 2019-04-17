@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { SplashPageComponent } from './splash-page/splash-page.component';
 import { EmergencyPromptComponent } from './emergency-prompt/emergency-prompt.component';
 import { ScenariosComponent } from './scenarios/scenarios.component';
-import { AdminComponent } from './admin/admin.component';
 import { EmergencyInfoComponent } from './emergency-info/emergency-info.component';
 import { ScenarioItemsComponent } from './scenario-items/scenario-items.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
@@ -34,7 +33,6 @@ export const firebaseConfig = {
     SplashPageComponent,
     EmergencyPromptComponent,
     ScenariosComponent,
-    AdminComponent,
     EmergencyInfoComponent,
     ScenarioItemsComponent,
     MainMenuComponent,
