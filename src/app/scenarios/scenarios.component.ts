@@ -25,4 +25,8 @@ export class ScenariosComponent implements OnInit {
   gotToAddScenarioPage() {
     this.router.navigate(['addScenario']);
   }
+
+  goBackToMainMenu() {
+    this.router.navigate(['mainMenu']);
+  }
 }

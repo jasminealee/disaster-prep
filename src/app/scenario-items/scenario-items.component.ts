@@ -17,16 +17,15 @@ import { ItemService } from '../item.service';
 export class ScenarioItemsComponent implements OnInit {
   @Output() clickSender = new EventEmitter();
 
-  bag: Item[];
   scenarioId;
   items: FirebaseListObservable<Item[]>;
   selectedScenario;
   newItem;
-  prepList: Item[];
 
   constructor(private route: ActivatedRoute, private scenarioService: ScenarioService, private database: AngularFireDatabase, private router: Router, private itemService: ItemService ) { }
 
   ngOnInit() {
+    // this.selectedScenario = this.scenarioService.getScenarioById(this.scenarioId);
     this.route.params.forEach((urlParameters) => {
       this.scenarioId = (urlParameters['scenarioId']); // access to the route and the value of 'id' in the path
     });
@@ -36,23 +35,31 @@ export class ScenarioItemsComponent implements OnInit {
         equalTo: this.scenarioId,
       }
     });
-    console.log(this.items);
-
-    // this.scenarioService.getScenarioById(this.scenarioId).subscribe(dataLastEmittedFromObserver => {
-    //   this.selectedScenario = new Scenario(dataLastEmittedFromObserver.title,
-    //                                         dataLastEmittedFromObserver.source)
-    // })
+    console.log(this.selectedScenario);
+    this.scenarioService.getScenarioById(this.scenarioId).subscribe(dataLastEmittedFromObserver => {
+      this.selectedScenario = new Scenario(dataLastEmittedFromObserver.title,
+                                            dataLastEmittedFromObserver.source)
+    })
   }
 
-  createNewItemForScenario(scenarioId) {
-    this.router.navigate(['addItem', scenarioId])
+  createNewItemForScenario() {
+    this.router.navigate(['addItem', this.scenarioId]);
   }
 
-  addItemToBag(item) {
-    this.bag.push(item);
+  goBackToScenarios() {
+    this.router.navigate(['scenarios']);
   }
 
-  addAllToPrepList(bag) {
-    this.prepList.push(bag);
+  goToItemInfo(selectedItem) {
+    this.router.navigate(['scenarios', this.scenarioId, 'itemInfo', selectedItem.$key]);
   }
+
+  deleteThisScenario() {
+    this.scenarioService.deleteScenario(this.scenarioId);
+  }
+
+  goBackToScenarioLibrary(){
+    this.router.navigate(['scenarios']);
+  }
+  
 }

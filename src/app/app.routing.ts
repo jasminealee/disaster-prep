@@ -12,8 +12,10 @@ import { SurvivalComponent } from './survival/survival.component';
 import { PrepComponent } from './prep/prep.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { AddScenarioComponent } from './add-scenario/add-scenario.component';
-
-
+import { ItemInfoComponent } from './item-info/item-info.component';
+import { PrepViewComponent } from './prep-view/prep-view.component';
+import { FirstAidComponent } from './first-aid/first-aid.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 const appRoutes: Routes = [
     {
@@ -33,6 +35,14 @@ const appRoutes: Routes = [
       component: MainMenuComponent
     },
     {
+      path: 'firstAid',
+      component: FirstAidComponent
+    },
+    {
+      path: 'navigation',
+      component: NavigationComponent
+    },
+    {
       path: 'scenarios',
       component: ScenariosComponent
     },
@@ -49,14 +59,22 @@ const appRoutes: Routes = [
       component: PrepComponent
     },
     {
+      path: 'prep/:prepId',
+      component: PrepViewComponent
+    },
+    {
       path: 'scenarios/:scenarioId',
       component: ScenarioItemsComponent
     },
     {
       path: 'addItem/:scenarioId',
       component: AddItemComponent
+    },
+    {
+      path: 'scenarios/:scenarioId/itemInfo/:itemId',
+      component: ItemInfoComponent
     }
   ];
-  
+
   export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
   
