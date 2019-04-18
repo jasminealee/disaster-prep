@@ -1,3 +1,18 @@
-<p (click)="goToScenario()">scenarios</p>
-<p (click)="goToPrep()">prep</p>
-<p (click)="goToSurvival()">survival</p>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul>
+        <li (click)="goToScenario()"><i class="fas fa-exclamation-triangle"></i>SCENARIOS</li>
+        <li (click)="goToPrep()"><i class="fas fa-tasks"></i>PREP</li>
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fas fa-first-aid"></i>SURVIVAL<i class="fas fa-angle-down"></i></button>
+          <div class="dropdown-content">
+            <a (click)="goToSurvival()">SURVIVAL</a>
+            <a>FIRST-AID</a>
+            <a >NAVIGATION</a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
