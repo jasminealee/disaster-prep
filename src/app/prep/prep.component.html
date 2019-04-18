@@ -1,4 +1,5 @@
-<p>
-  prep works!
-</p>
+<div *ngFor="let prep of preps | async">
+  <div (click)="goToPrepPage(prep)">{{prep.title}}</div>
+</div>
 
+<p (click)="goBackToMainMenu()">go back to main menu</p>

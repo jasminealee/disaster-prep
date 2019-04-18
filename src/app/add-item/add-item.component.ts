@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Item } from '../models/item.model';
 import { ItemService } from '../item.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-add-item',
@@ -12,9 +14,9 @@ import { ItemService } from '../item.service';
 export class AddItemComponent implements OnInit {
   scenarioId;
   newItem;
-  source;
+  source = null;
 
-  constructor(private route: ActivatedRoute, private itemService: ItemService) { }
+  constructor(private route: ActivatedRoute, private itemService: ItemService, private router: Router) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -22,9 +24,12 @@ export class AddItemComponent implements OnInit {
     });
   }
 
-  submitForm(newTitle) {
-    this.newItem = new Item(newTitle, this.scenarioId, this.source)
+  submitForm(newTitle, newAbout) {
+    this.newItem = new Item(newTitle, newAbout, this.scenarioId, this.source);
     this.itemService.addItem(this.newItem);
   }
 
+  goBackToScenarioItems() {
+    this.router.navigate(['scenarios', this.scenarioId])
+  }
 }

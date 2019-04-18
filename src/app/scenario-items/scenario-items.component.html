@@ -1,13 +1,19 @@
-<div *ngFor="let item of items | async">
-  <div>{{item.title}}</div>
-  <img src="{{item.source}}">
-  <!-- <<p (click)="addItemToBag(item)">add item to bag</p>
-</div> -->
+<h1>{{selectedScenario.title}}</h1>
 
-<!-- 
-<div>Bag: 
-  <div *ngFor="item of bag | async">
+<div *ngFor="let item of items | async">
+  <div (click)="goToItemInfo(item)">{{item.title}}</div>
+  <!-- <img src="{{item.source}}"> -->
+</div>
+
+
+<!-- <br><div>Bag: 
+  <div *ngFor="let item of bag | async">
     <div>{{item.title}}</div>
     <p (click)="addAllToPrepList(bag)">Add to prep list</p>
   </div>
 </div> -->
+
+<p (click)="createNewItemForScenario()">Add item to {{selectedScenario.title}} (+)</p>
+<p (click)="deleteThisScenario(); goBackToScenarioLibrary()">Delete</p>
+
+<p (click)=goBackToScenarios()>go back to scenarios (-)</p>
