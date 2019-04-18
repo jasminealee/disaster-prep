@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="nested">
+    <div *ngFor="let scenario of scenarios | async">
+      <div (click)="goToScenarioPage(scenario)">{{scenario.title}}</div>
+    </div>
+  </div>
+</div>
+
+<p (click)="gotToAddScenarioPage()">Add a scenario</p>
+
