@@ -7,8 +7,13 @@
           <br>
           <input #newTitle>
         </div>
+        <div>
+          <label>about the item:</label>
+          <br>
+          <input #newAbout>
+        </div>
       </div>
-      <br><button (click)="submitForm(newTitle.value); goBackToScenarioItems();  newTitle.value='';">Submit</button>
+      <br><button (click)="submitForm(newTitle.value, newAbout.value); goBackToScenarioItems();  newTitle.value='';">Submit</button>
     </div>
     <p (click)="goBackToScenarioItems()">go back(-)</p>
   </div>
