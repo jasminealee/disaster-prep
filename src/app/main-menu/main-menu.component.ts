@@ -25,6 +25,14 @@ export class MainMenuComponent implements OnInit {
   }
 
   goToSurvival() {
-    return this.router.navigate(['survival']);
+   this.router.navigate(['survival']);
+  }
+
+  goToFirstAid() {
+    this.router.navigate(['firstAid'])
+  }
+
+  goToNavigation() {
+    this.router.navigate(['navigation'])
   }
 }
