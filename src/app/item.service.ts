@@ -23,4 +23,8 @@ export class ItemService {
     return this.database.object('items/' + itemId);
   }
 
+  deleteItemById(itemId: string) {
+    var itemEntryInFireBase = this.getItemById(itemId);
+    itemEntryInFireBase.remove();
+  }
 }

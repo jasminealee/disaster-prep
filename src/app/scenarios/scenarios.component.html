@@ -1,4 +1,5 @@
 <div class="wrapper">
+  <div><h1>Scenarios</h1></div>
   <div class="nested">
     <div *ngFor="let scenario of scenarios | async">
       <div (click)="goToScenarioPage(scenario)">{{scenario.title}}</div>
@@ -6,5 +7,7 @@
   </div>
 </div>
 
-<p (click)="gotToAddScenarioPage()">Add a scenario</p>
+<p (click)="gotToAddScenarioPage()">Add a scenario (+)</p>
+
+<p (click)="goBackToMainMenu()">Back to main menu (-)</p>
 

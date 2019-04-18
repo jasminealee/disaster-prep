@@ -1,0 +1,9 @@
+<div *ngIf="currentRoute === '/scenarios/' + scenarioId + '/itemInfo/' + itemId">
+  <p (click)="addItemToPrepList(); goBackToScenarioItems()">Add {{selectedItem.title}} to prep list ( )</p>
+  <p>About: {{selectedItem.about}}</p>
+  <br><p (click)="goBackToScenarioItems()">Go back (-)</p>
+</div>
+
+<br><p (click)="begineDeletingThisItem()">delete {{selectedItem.title}}</p>
+
+

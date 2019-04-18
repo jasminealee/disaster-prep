@@ -27,4 +27,10 @@ export class ScenarioService {
   goToScenarioLibarary() {
     return this.router.navigate(['/scenarios']);
   }
+
+  deleteScenario(scenarioId) {
+    var scenarioEntryInFirebase = this.getScenarioById(scenarioId);
+    scenarioEntryInFirebase.remove();
+
+  }
 }
