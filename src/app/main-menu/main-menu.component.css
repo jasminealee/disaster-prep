@@ -68,3 +68,18 @@ li a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  padding: 15px;
+  background-color: #59544B;
+  color: white;
+}
+p {
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+  font-weight: bold;
+}
