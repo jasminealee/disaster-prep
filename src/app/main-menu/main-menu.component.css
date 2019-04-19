@@ -83,3 +83,9 @@ p {
   font-family: 'Exo', sans-serif;
   font-weight: bold;
 }
+h1 {
+  text-align: center;
+  margin-top: 200px;
+  font-family: 'Teko', sans-serif;
+  font-size: 50px;
+}

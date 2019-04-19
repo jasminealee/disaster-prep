@@ -1,6 +1,17 @@
-<h1>Prep bag</h1>
-<div *ngFor="let prep of preps | async">
-  <div (click)="goToPrepPage(prep)">{{prep.title}}</div>
-</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul>
+        <li class="menu" (click)="goBackToMainMenu()"><i class="fas fa-arrow-alt-circle-left fa-lg"></i>MAIN MENU</li>
+        <li class="title">PREP BAG</li>
+        </ul>
+    </div>
+  </div>
+</nav>
 
-<p (click)="goBackToMainMenu()">go back to main menu</p>
+<div class="container body">
+  <p>Here are your items</p>
+  <div *ngFor="let prep of preps | async">
+    <div (click)="goToPrepPage(prep)">{{prep.title}}</div>
+  </div>
+</div>
